@@ -9,6 +9,7 @@ Color kSecondaryColor = Color(0xff292A2D);
 Color kBackgroundColor1 = Color(0xffFFFFFF);
 Color kBlackColor = Color(0xff292A2D);
 Color kGreyColor = Color(0xffE5E5E5);
+Color kGreyColor2 = Color(0xff98999F);
 
 TextStyle primaryTextStyle = GoogleFonts.mulish(
   color: kBlackColor,
@@ -19,7 +20,7 @@ TextStyle whiteTextStyle = GoogleFonts.mulish(
 );
 
 TextStyle greyTextStyle = GoogleFonts.mulish(
-  color: kGreyColor,
+  color: kGreyColor2,
 );
 
 TextStyle blueTextStyle = GoogleFonts.mulish(
