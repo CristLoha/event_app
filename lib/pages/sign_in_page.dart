@@ -61,7 +61,7 @@ class SignInPage extends StatelessWidget {
           children: [
             CustomButton(
               title: 'Login',
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, '/home-page'),
             ),
             SizedBox(height: defaultMargin),
             Container(

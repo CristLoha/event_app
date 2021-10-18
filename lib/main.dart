@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jobby_app/pages/home_page.dart';
 import 'package:jobby_app/pages/sign_in_page.dart';
 import 'pages/sign_up_page.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SignInPage(),
         '/sign-up': (context) => SignUpPage(),
+        '/home-page': (context) => HomePage(),
       },
     );
   }
