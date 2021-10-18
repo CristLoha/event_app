@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:jobby_app/shared/theme.dart';
+import 'package:jobby_app/widgets/custom_button.dart';
 import 'package:jobby_app/widgets/input_custom.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +54,18 @@ class LoginPage extends StatelessWidget {
       );
     }
 
+    Widget buttonRegister() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: defaultMargin,
+        ),
+        padding: EdgeInsets.symmetric(
+          horizontal: defaultMargin,
+        ),
+        child: CustomButton(title: 'Register'),
+      );
+    }
+
     return Scaffold(
       backgroundColor: kBackgroundColor1,
       body: SafeArea(
@@ -60,6 +73,7 @@ class LoginPage extends StatelessWidget {
           children: [
             title(),
             inputRegister(),
+            buttonRegister(),
           ],
         ),
       ),
