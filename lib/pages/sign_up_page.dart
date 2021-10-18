@@ -3,8 +3,8 @@ import 'package:jobby_app/shared/theme.dart';
 import 'package:jobby_app/widgets/custom_button.dart';
 import 'package:jobby_app/widgets/input_custom.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,10 @@ class RegisterPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            CustomButton(title: 'Register'),
+            CustomButton(
+              title: 'Register',
+              onPressed: () {},
+            ),
             SizedBox(height: defaultMargin),
             Container(
               margin: EdgeInsets.symmetric(
@@ -123,11 +126,14 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 4),
-                Text(
-                  'Sign in',
-                  style: blueTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: semiBold,
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, '/'),
+                  child: Text(
+                    'Sign in',
+                    style: blueTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
                   ),
                 ),
               ],

@@ -3,9 +3,11 @@ import 'package:jobby_app/shared/theme.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
+  final Function() onPressed;
   const CustomButton({
     Key? key,
     required this.title,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -14,7 +16,10 @@ class CustomButton extends StatelessWidget {
       width: double.infinity,
       height: 64,
       child: ElevatedButton(
-        onPressed: () {},
+        style: TextButton.styleFrom(
+          backgroundColor: kPrimaryColor,
+        ),
+        onPressed: onPressed,
         child: Text(
           title,
           style: whiteTextStyle.copyWith(
