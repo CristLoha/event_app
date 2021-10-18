@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/button_list.dart';
-import 'package:flutter_signin_button/button_view.dart';
 import 'package:jobby_app/shared/theme.dart';
 import 'package:jobby_app/widgets/custom_button.dart';
 import 'package:jobby_app/widgets/input_custom.dart';
