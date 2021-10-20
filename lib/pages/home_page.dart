@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobby_app/shared/theme.dart';
+import 'package:jobby_app/widgets/recommended_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget header() {
       return Container(
-        margin: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+        margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
         child: AppBar(
           centerTitle: true,
           title: Text(
@@ -115,13 +116,58 @@ class HomePage extends StatelessWidget {
     }
 
     Widget recommendedTitle() {
-      return Container();
+      return Container(
+        margin: EdgeInsets.only(top: 40, left: defaultMargin),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Recommended Jobs',
+              style: primaryTextStyle.copyWith(
+                fontSize: 18,
+                fontWeight: bold,
+              ),
+            ),
+            Text(
+              'See All',
+              style: blueTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: bold,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget recommendedContent() {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SizedBox(width: defaultMargin),
+              RecommendedCard(),
+              SizedBox(width: 20),
+              RecommendedCard(),
+              SizedBox(width: defaultMargin),
+            ],
+          ),
+        ),
+      );
     }
 
     return Scaffold(
       backgroundColor: kBackgroundColor1,
       body: ListView(
-        children: [header(), title(), inputSearch()],
+        children: [
+          header(),
+          title(),
+          inputSearch(),
+          recommendedTitle(),
+          recommendedContent(),
+        ],
       ),
     );
   }
