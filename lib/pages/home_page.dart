@@ -114,6 +114,10 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget recommendedTitle() {
+      return Container();
+    }
+
     return Scaffold(
       backgroundColor: kBackgroundColor1,
       body: ListView(
