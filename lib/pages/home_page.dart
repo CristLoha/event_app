@@ -162,6 +162,7 @@ class HomePage extends StatelessWidget {
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: kBackgroundColor1,
       body: ListView(
         children: [
@@ -170,6 +171,7 @@ class HomePage extends StatelessWidget {
           inputSearch(),
           recommendedTitle(),
           recommendedContent(),
+          SizedBox(height: 20),
         ],
       ),
     );
