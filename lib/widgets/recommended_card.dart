@@ -94,7 +94,7 @@ class RecommendedCard extends StatelessWidget {
                   SizedBox(width: 7),
                   Expanded(
                     child: Text(
-                      '\$8k/m',
+                      '\$8k/mo',
                       style: primaryTextStyle.copyWith(
                           fontSize: 16, fontWeight: semiBold),
                     ),
