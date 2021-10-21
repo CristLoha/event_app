@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobby_app/shared/theme.dart';
+import 'package:jobby_app/widgets/recent_card.dart';
 import 'package:jobby_app/widgets/recommended_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -161,6 +162,47 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget recentTitle() {
+      return Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: 30,
+        ),
+        margin: EdgeInsets.only(top: 40),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Recent Jobs',
+              style: primaryTextStyle.copyWith(
+                fontSize: 18,
+                fontWeight: bold,
+              ),
+            ),
+            Text(
+              'See All',
+              style: blueTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: bold,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget recentContent() {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: Row(
+          children: [
+            SizedBox(width: defaultMargin),
+            RecentCard(),
+            SizedBox(width: defaultMargin),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: kBackgroundColor1,
@@ -171,7 +213,11 @@ class HomePage extends StatelessWidget {
           inputSearch(),
           recommendedTitle(),
           recommendedContent(),
-          SizedBox(height: 20),
+          recentTitle(),
+          recentContent(),
+          SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
