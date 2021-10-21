@@ -9,7 +9,6 @@ class RecentCard extends StatelessWidget {
     return Expanded(
       child: Container(
         width: 354,
-        height: 100,
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         decoration: BoxDecoration(
           border: Border.all(
@@ -23,7 +22,60 @@ class RecentCard extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(),
+            Row(
+              children: [
+                Image.asset(
+                  'assets/icon_twitter.png',
+                  width: 60,
+                ),
+                SizedBox(width: 15),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'UX Designer',
+                            style: primaryTextStyle.copyWith(
+                                fontSize: 16, fontWeight: bold),
+                          ),
+                          Text(
+                            '1 hr ago',
+                            style: greyTextStyle.copyWith(
+                              fontWeight: semiBold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 8),
+                      Row(
+                        children: [
+                          Text(
+                            'Twitter',
+                            style: primaryTextStyle.copyWith(
+                                fontSize: 16, fontWeight: semiBold),
+                          ),
+                          SizedBox(width: 7),
+                          Image.asset(
+                            'assets/divider.png',
+                            width: 4,
+                          ),
+                          SizedBox(width: 7),
+                          Text(
+                            'West Jakarta',
+                            style: primaryTextStyle.copyWith(
+                                fontSize: 16, fontWeight: semiBold),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 18.5)
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
