@@ -21,7 +21,32 @@ class RecommendedCard extends StatelessWidget {
         ),
       ),
       child: Column(
-        children: [Text('Simon')],
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 10.5),
+                child: Image.asset(
+                  'assets/icon_company_logo.png',
+                  width: 70,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Image.asset(
+                  'assets/icon_favorite.png',
+                  width: 26,
+                ),
+              ),
+            ],
+          ),
+          Text(
+            'Senior Product Designer',
+            style: primaryTextStyle.copyWith(fontSize: 18, fontWeight: bold),
+          ),
+        ],
       ),
     );
   }
